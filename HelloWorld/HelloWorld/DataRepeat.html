@@ -24,5 +24,22 @@
         </table>
 
     </div>
+
+    <div ng-controller="MyCtrlNested">
+        
+        <ul>
+            <li ng-repeat="employee in LanguageData">
+                {{ employee.name }}
+
+                <ul>
+                    <li ng-repeat="language in LanguageData.languages">
+                        {{ language.name }}
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
 </body>
 </html>
