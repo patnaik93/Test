@@ -3,20 +3,30 @@
 <head>
 
     <title>Bye World</title>
-    <script src="Script/angular.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.js"></script>
+    <script src="Script/angular.js"></script>
+    <script src="Script/angular.min.js"></script>   
+    <script src="Scripts/ng-grid.js"></script>
+    <script src="Scripts/ui-grid.js"></script>
     <script src="Script/JavaScript.js"></script>
-	<meta charset="utf-8" />
 </head>
-<body ng-app="ModuleName">
+<body >
 
-    <div ng-controller="ControllerName">
-        {{ message }}
+    <div ng-app="ModuleName">
+        <div ng-controller="ControllerName">
+
+            <input type="text" ng-model="message" /> <br />
+            {{ message }} <br />
+            Name : {{ emp.firstName }} {{ emp.lastName }} <br />
+            Age: {{emp.age}} <br />
+            Pic: <img ng-src="{{emp.pic}}" alt="pic.png" style="height:150px; width:100px" />
+        </div>
     </div>
-    
-    <div ng-controller="ControllerName">
-        Name : {{ emp.firstName }} {{ emp.lastName  }} <br />
-        Age: {{emp.age}} <br />
-        Pic: <img src="{{emp.pic}}" alt="pic.png" style="height:100px; width:200px" />
+    <div ng-app="myApp">
+        <div ng-controller="MyCtrl">
+            <div class="gridStyle" ng-grid="gridOptions">
+            </div>
+        </div>
     </div>
 </body>
 </html>
