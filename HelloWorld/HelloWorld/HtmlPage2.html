@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html ng-app="sampleapp">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="http://ui-grid.info/release/ui-grid-unstable.js"></script>
+    <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid-unstable.css" type="text/css" />
+
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="appMainCtrl">
+        <div ui-grid="{ data: data, coulmnDefs: columnDefs, 
+             enableRowSelection: true, enableSelectAll: true, enableFiltering: true,}" class="grid" ui-grid-selection ui-grid-edit ui-grid-cellnav></div>
+        <button ng-class="addNewItem()"> ADD</button>
+    
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
